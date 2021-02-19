@@ -1,31 +1,30 @@
 import React from "react";
 import "./Search.css";
 // import { Jumbotron, Button} from "react-bootstrap";
-import {InputGroup, FormControl, Button, Dropdown, DropdownButton } from  "react-bootstrap";
+import {InputGroup, FormControl, Button, Dropdown, DropdownButton, Row, Col } from  "react-bootstrap";
 
 
 
 const Search = () =>{
+  const add = () =>{
+
+  };
     return (
-
-<InputGroup>
+<Row>
+  <Col>
+  <InputGroup className="mb-3">
+    <InputGroup.Prepend>
+      <InputGroup.Text id="inputGroup-sizing-default">Podaj kwotę</InputGroup.Text>
+    </InputGroup.Prepend>
     <FormControl
-      placeholder="Recipient's username"
-      aria-label="Recipient's username"
-      aria-describedby="basic-addon2"
+      aria-label="Default"
+      aria-describedby="inputGroup-sizing-default"
     />
-
-    <DropdownButton
-      as={InputGroup.Append}
-      variant="outline-primary"
-      title="Waluta"
-      id="input-group-dropdown-2"
-    >
-      <Dropdown.Item href="#">Polski Złoty (PLN)</Dropdown.Item>
-      <Dropdown.Item href="#">Euro (EUR)</Dropdown.Item>
-      <Dropdown.Item href="#">Dolar Amerykański (USD)</Dropdown.Item>
-    </DropdownButton>
   </InputGroup>
+  </Col>
+  <Col></Col>
+  <Col></Col>
+  </Row>
     );
     // return <div>Hello</div>
 };

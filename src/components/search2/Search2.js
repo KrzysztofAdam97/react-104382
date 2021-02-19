@@ -8,24 +8,11 @@ import {InputGroup, FormControl, Button, Dropdown, DropdownButton } from  "react
 const Search2 = () =>{
     return (
 
-<InputGroup>
-    <FormControl
-      placeholder="Recipient's username"
-      aria-label="Recipient's username"
-      aria-describedby="basic-addon2"
-    />
-
-    <DropdownButton
-      as={InputGroup.Append}
-      variant="outline-primary"
-      title="Waluta"
-      id="input-group-dropdown-2"
-    >
-      <Dropdown.Item href="#">Polski Złoty (PLN)</Dropdown.Item>
-      <Dropdown.Item href="#">Euro (EUR)</Dropdown.Item>
-      <Dropdown.Item href="#">Dolar Amerykański (USD)</Dropdown.Item>
-    </DropdownButton>
-  </InputGroup>
+<DropdownButton id="dropdown-basic-button" title="Waluta">
+  <Dropdown.Item href="#/action-1">Polski Złoty (PLN)</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Dolar Amerykański (USD)</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Euro (EUR)</Dropdown.Item>
+</DropdownButton>
     );
     // return <div>Hello</div>
 };
