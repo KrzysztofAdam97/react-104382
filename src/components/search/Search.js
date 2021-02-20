@@ -1,14 +1,29 @@
-import React from "react";
+import Reac, {useState} from "react";
 import "./Search.css";
 // import { Jumbotron, Button} from "react-bootstrap";
 import {InputGroup, FormControl, Button, Dropdown, DropdownButton, Row, Col } from  "react-bootstrap";
 
 
 
-const Search = () =>{
-  const add = () =>{
+
+const Search = (props) =>{
+
+  const [liczba, setLiczba] = useState("");
+
+  const userTyped = (event) => {
+   setLiczba(event.target.value);
+   //  console.log(event.target.value);
+
 
   };
+
+  const userSearch = () =>{
+
+   props.onSearch(liczba)
+
+   // alert("Wyszukaj");
+  }
+
     return (
 <Row>
   <Col>
@@ -25,10 +40,13 @@ const Search = () =>{
       id = "liczbadopoliczenia"
       placeholder ="no podaj  tę kwotę proszę, bo czekam :)"
       autocomplete = "off"
+      onChange={userTyped}
+      value={liczba}
     />
   </InputGroup>
+  
   </Col>
- 
+  <p>{liczba}</p>
   <Col></Col>
   </Row>
     );
@@ -36,3 +54,5 @@ const Search = () =>{
 };
 
 export default Search;
+
+

@@ -42,7 +42,7 @@ return(
 			 	<option value="INR">INR - Rupia Indyjska</option>
 			 	<option value="KRW">KRW - Won Południowokoreański</option>
 			 	<option value="CNY">CNY - Yuan renminbi (Chiny)</option>
-			 	<option value="pln">PLN - złoty</option>
+			 	<option value="PLN">PLN -Polski złoty</option>
 
 
 </select>
