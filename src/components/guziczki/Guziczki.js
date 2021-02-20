@@ -1,6 +1,12 @@
 import React, {useState} from "react";
 import "./Guziczki.css";
-import { Jumbotron, Button, Row, Col} from "react-bootstrap";
+import { Jumbotron, Button, Row, Col, Alert} from "react-bootstrap";
+import { waluty } from '../../data';
+import Karta from "../card/Karta";
+import waluta from "../search5/Search5";
+
+
+
 
 
 
@@ -8,14 +14,20 @@ import { Jumbotron, Button, Row, Col} from "react-bootstrap";
 // import Search from "./components/search/Search";
 
 
-const Guziczki = () =>{
+const Guziczki = ({ileWaluty, kurs}) =>{
 
     
 
     const policz = (event) =>{
 
-        alert(5*5);
-    }
+      alert ("Twoje " + ileWaluty + " PLN = "+ ileWaluty * kurs +" twojej nowej waluty. ");
+    
+     
+
+  
+        };
+       
+    
     return (
 <>
 <Row className="Row">

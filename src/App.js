@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {Container, Row, Col, Jumbotron, Button} from "react-bootstrap";
+import {Container, Row, Col, Jumbotron, Button, Alert} from "react-bootstrap";
 import Header from "./components/header/Header";
 import Search from "./components/search/Search";
 import Search2 from "./components/search2/Search2";
@@ -16,6 +16,23 @@ import Szukajka2 from "./components/szukajka2/Szukajka2"
 const App = () => {
 
 const [searchData, setsearchData] = useState ("");
+
+
+const [ileWaluty, setIleWaluty] = useState("");
+const [kurs, setKurs] = useState("");
+
+const changeIloscWaluty = (ile) =>{
+
+console.log(ile)
+setIleWaluty(ile);
+};
+
+const changeKurs = (kurs) =>{
+
+  console.log(kurs);
+  setKurs(kurs);
+};
+
 
 const userSearched = (waluta) => {
   setsearchData(waluta);
@@ -39,28 +56,28 @@ const userSearched = (waluta) => {
       </Row>
   
       
-      <Search />
+      <Search changeIloscWaluty = {changeIloscWaluty} />
       <Row>
         <Col>
         <p4 className = "p4">Przelicz z:</p4>
         <Szukajka1/>
         </Col>
         <Col>
-        <p3 className = "p3">Przelicz na:</p3>
+        <p3 className = "p3">Podpowiedź waluty:</p3>
         <Szukajka2/>
         </Col>
-        
       </Row>
-    
      <br></br>
       <Row>
         <Col>
         <Search2 /></Col>
         <Col>
-        <Search3 /></Col>
+        <Search3 changeKurs = {changeKurs} /></Col>
       </Row>
-
-      <Guziczki/>
+      <Guziczki ileWaluty={ileWaluty} kurs={kurs}/>
+      <Alert variant="success" className="alert">
+      Tu domyślnie ma pojawić się to, co zostało przeliczone
+    </Alert>
 {/* 
       <br></br>
       <p5>Wynik:</p5> */}
