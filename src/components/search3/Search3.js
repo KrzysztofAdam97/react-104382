@@ -5,21 +5,34 @@ import {InputGroup, FormControl, Button, Dropdown, DropdownButton,Row, Col } fro
 
 
 
+// const Search = ({changeIloscWaluty}) =>{
 
-const Search3 = (props) =>{
+//   const [liczba,setLiczba] = useState()
 
-  const [kurs, setKurs] = useState("");
+//   const userTyped = (event) => {
+//     setLiczba(event.target.value)
+
+//     let ile = parseInt (event.target.value)
+//     changeIloscWaluty(ile)
+
+const Search3 = ({changeKurs}) =>{
+
+  const [kursy, setKursy] = useState();
 
    const userTyped = (event) => {
-    setKurs(event.target.value);
+    setKursy(event.target.value);
+
+    let kurs = parseFloat(event.target.value);
+    changeKurs(kurs);
+
     //  console.log(event.target.value);
 
 
-   };
+  //  };
 
-   const userSearch = () =>{
+  //  const userSearch = () =>{
 
-    props.onSearch(kurs)
+  //   props.onSearch(kurs)
 
     // alert("Wyszukaj");
       
@@ -35,19 +48,19 @@ const Search3 = (props) =>{
       aria-label="Default"
       aria-describedby="inputGroup-sizing-default"
       input type = "number"
-      min = "0"
+      min = "0.001"
       name = "liczbpopoliczeniu"
       id = "liczbapopoliczeniu"
       placeholder =" :)"
       autocomplete = "off"
       onChange={userTyped}
-      value={kurs}
+      value={kursy}
 
      
     />
   </InputGroup>
 
-  <p>{kurs}</p>
+  {/* <p>{kurs}</p> */}
   </Col>
  
   <Col></Col>

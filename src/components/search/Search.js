@@ -1,4 +1,4 @@
-import Reac, {useState} from "react";
+import React, {useState} from "react";
 import "./Search.css";
 // import { Jumbotron, Button} from "react-bootstrap";
 import {InputGroup, FormControl, Button, Dropdown, DropdownButton, Row, Col } from  "react-bootstrap";
@@ -6,23 +6,28 @@ import {InputGroup, FormControl, Button, Dropdown, DropdownButton, Row, Col } fr
 
 
 
-const Search = (props) =>{
 
-  const [liczba, setLiczba] = useState("");
+const Search = ({changeIloscWaluty}) =>{
+
+  const [liczba,setLiczba] = useState();
 
   const userTyped = (event) => {
-   setLiczba(event.target.value);
+    setLiczba(event.target.value);
+
+    let ile = parseFloat (event.target.value);
+    changeIloscWaluty(ile);
+  //  setLiczba(event.target.value);
    //  console.log(event.target.value);
 
 
   };
 
-  const userSearch = () =>{
+  // const userSearch = () =>{
 
-   props.onSearch(liczba)
+  //  props.onSearch(liczba)
 
-   // alert("Wyszukaj");
-  }
+  //  // alert("Wyszukaj");
+  // }
 
     return (
 <Row>
@@ -35,7 +40,7 @@ const Search = (props) =>{
       aria-label="Default"
       aria-describedby="inputGroup-sizing-default"
       input type = "number"
-      min = "0"
+      min = "0.001"
       name = "liczbadopoliczenia"
       id = "liczbadopoliczenia"
       placeholder ="no podaj  tę kwotę proszę, bo czekam :)"
@@ -46,7 +51,7 @@ const Search = (props) =>{
   </InputGroup>
   
   </Col>
-  <p>{liczba}</p>
+  {/* <p>{liczba}</p> */}
   <Col></Col>
   </Row>
     );

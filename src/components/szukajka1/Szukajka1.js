@@ -17,7 +17,7 @@ return (
 			 	<option value="CHF">CHF - Frank szwajcarski</option>
 			 	<option value="HRK">HRK - Kuna (Chorwacja)</option>
 			 	<option value="THB">THB - Bat (Tajlandia)</option>
-			 	<option value="AUD">AUD - Dola Australijski</option>
+			 	<option value="AUD">AUD - Dolar Australijski</option>
 			 	<option value="HKD">HKD - Dolar Hongkongu</option>
 			 	<option value="CAD">CAD - Dolar Kanadyjski</option>
 			 	<option value="NZD">NZD - Dolar Nowozelandzki</option>
