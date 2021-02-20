@@ -35,7 +35,7 @@ const userSearched = (waluta) => {
     
     
       <Row className ="Row">
-      <p6 className = "p6">Przelicznik kursów walut</p6>
+      <p6 className = "p6">Przelicznik złotówkowy</p6>
       </Row>
   
       
@@ -61,9 +61,9 @@ const userSearched = (waluta) => {
       </Row>
 
       <Guziczki/>
-
+{/* 
       <br></br>
-      <p5>Wynik:</p5>
+      <p5>Wynik:</p5> */}
    
     
       {/* <p4>Przelicz na:</p4> */}
