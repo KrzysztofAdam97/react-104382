@@ -5,21 +5,33 @@ import Karta from "../card/Karta";
 import { waluty } from '../../data';
 
 
+
 const Waluty = (props) => {
 
 // props.whatToFind
 
-const getWaluta = (text) => {
+const getWaluty = (allWaluty, text) => {
+
+    if (text === null || text.lenght ===0) return allWaluty;
 
     let result = [];
     
-}
+    allWaluty.forEach((waluta) => {
+     if (waluta.waluta.includes(text) || waluta.skrot.includes(text))   {
+         result.push(waluta);
+     }
+    });
+    return result;
+
+};
+
+const selectedWaluty = getWaluty(waluty, props.whatToFind);
 
 
     return (
         <div
             className="waluty">
-                {waluty.map(waluta => (
+                {selectedWaluty.map(waluta => (
                      <Karta key={waluta.waluta} 
                      nazwaWaluta={waluta.waluta} 
                      skrot={waluta.skrot} 
@@ -27,7 +39,7 @@ const getWaluta = (text) => {
                      kurs2={waluta.kurs2}/>
 
                 ))}
-                <h1>{props.whatToFind}</h1>
+                {/* <h1>{props.whatToFind}</h1> */}
 {/* 
             <Karta nazwaWaluta="Polski Złoty"/>
             <Karta nazwaWaluta="Euro"/>

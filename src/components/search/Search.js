@@ -19,10 +19,16 @@ const Search = () =>{
     <FormControl
       aria-label="Default"
       aria-describedby="inputGroup-sizing-default"
+      input type = "number"
+      min = "0"
+      name = "liczbadopoliczenia"
+      id = "liczbadopoliczenia"
+      placeholder ="no podaj  tę kwotę proszę, bo czekam :)"
+      autocomplete = "off"
     />
   </InputGroup>
   </Col>
-  <Col></Col>
+ 
   <Col></Col>
   </Row>
     );

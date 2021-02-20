@@ -157,7 +157,8 @@ export const waluty = [
         kurs: " 1 BRL = 0,68 PLN",
         kurs2: "1 PLN = 1,47 BRL",
     }
-
+    
+  
 
     
 

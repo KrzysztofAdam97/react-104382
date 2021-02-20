@@ -39,7 +39,7 @@ const Search5 = (props) =>{
     </InputGroup.Append>
   </InputGroup>
 
-  <p>{waluta}</p>
+  {/* <p>{waluta}</p> */}
   </>
 
     );
